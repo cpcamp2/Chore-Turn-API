@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   validates :first_name, :last_name, :username, :email, :password, presence: true
+
   has_secure_password
 
   has_many :assignment_chores
