@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  validates :first_name, :last_name, :username, presence: true
+  validates :first_name, :last_name, :username, :email, :password, presence: true
 
   has_many :assignment_chores
   has_many :household_users
