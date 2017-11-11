@@ -4,4 +4,7 @@ Rails.application.routes.draw do
     resources :households
 
     root 'welcome#index'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 end
