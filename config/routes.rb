@@ -10,4 +10,7 @@ Rails.application.routes.draw do
     end
 
     root 'welcome#index'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 end
