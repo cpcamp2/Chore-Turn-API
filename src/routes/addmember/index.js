@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 // import style from './style';
-
 // import Button from 'react-toolbox/button';
 
 export default class AddMember extends Component {
@@ -14,7 +13,7 @@ export default class AddMember extends Component {
 	          <li> Member Email: <input type="text" name="email"/> </li> <br/>
 						<li> Member Email: <input type="text" name="email"/> </li> <br/>
 						<li> Member Email: <input type="text" name="email"/> </li> <br/>
-	        <input type="submit" value="Next"/>
+	          <input type="submit" value="Next"/>
 	        </ul>
 	    </div>
 		);
