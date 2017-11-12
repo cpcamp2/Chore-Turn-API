@@ -4,6 +4,7 @@ import { h, Component } from 'preact';
 import { Link } from 'preact-router/match';
 
 class Login extends Component {
+
   render() {
     return (
       <div className="log-in">
