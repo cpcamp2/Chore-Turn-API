@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
        render json: @user
     else
       if @user
-        render json: @user.errors
+        render json: {"errors" => "ERROR!"}
       else
         render json: {"errors" => "ERROR!"}
       end
