@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 // import style from './style';
-// import $ from 'jquery';
 
 export default class Newuser extends Component {
 	render() {

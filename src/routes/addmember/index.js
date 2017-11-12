@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 // import style from './style';
-// import $ from 'jquery';
 // import Button from 'react-toolbox/button';
 
 export default class AddMember extends Component {
@@ -9,11 +8,12 @@ export default class AddMember extends Component {
 			<div className= "addmember" >
 				<br></br>
 				<br></br>
-				<h1>Add Members to you household</h1>
+				<h1>Add Members to you household!</h1>
 	        <ul>
 	          <li> Member Email: <input type="text" name="email"/> </li> <br/>
 						<li> Member Email: <input type="text" name="email"/> </li> <br/>
-	        <input type="submit" value="Next"/>
+						<li> Member Email: <input type="text" name="email"/> </li> <br/>
+	          <input type="submit" value="Next"/>
 	        </ul>
 	    </div>
 		);
@@ -27,7 +27,5 @@ export default class AddMember extends Component {
     //     <Button mini kind="floating" icon="add" accent />
     //   </div>
     // );
-
-
 	}
 }

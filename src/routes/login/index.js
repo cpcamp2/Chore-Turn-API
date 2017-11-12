@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
-// import './App.css';
-// import $ from 'jquery';
+
+
 import { Link } from 'preact-router/match';
 
 class Login extends Component {
@@ -29,7 +29,6 @@ class Login extends Component {
       .catch( err => console.log(err))
   }
 
-
   render() {
     return (
       <div className="log-in">
@@ -48,8 +47,9 @@ class Login extends Component {
             <Link activeClassName="password" href="/signup/">Forgot Your Password?</Link>
 
         </ul>
-        </form>
-      </div>
+      </form>
+
+     </div>
     );
   }
 }
