@@ -6,9 +6,10 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'rack-cors', :require => 'rack/cors'
 
 gem 'rails', '~> 5.1.4'
-
+# gem ''
 gem 'pg', '~> 0.18'
 
 gem 'puma', '~> 3.7'
@@ -24,6 +25,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
+  gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
