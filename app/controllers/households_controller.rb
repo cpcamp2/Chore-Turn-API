@@ -34,11 +34,11 @@ class HouseholdsController < ApplicationController
   end
 
   def destroy
-  @household = Household.find(params[:id])
-  @household.destroy
+    @household = Household.find(params[:id])
+    @household.destroy
 
-  redirect_to households_path
-end
+    redirect_to households_path
+  end
 
   private
   def household_params
