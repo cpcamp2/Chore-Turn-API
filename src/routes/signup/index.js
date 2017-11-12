@@ -25,7 +25,7 @@ class Signup extends Component {
           body: data
         })
         .then( res => res.json())
-        .then( jsonRes => console.log(jsonRes))
+        .then( jsonRes => window.location = "/profile")
         .catch( err => console.log(err))
     }
 
@@ -43,12 +43,12 @@ class Signup extends Component {
             <li> Username: <input ref={ c => this.userName = c} type="text"/> </li> <br/>
             <li> Email: <input ref={d => this.email = d} type="text"/> </li> <br/>
             <li> Password: <input ref={e => this.password = e} type="password"/> </li> <br/>
-          <input type="submit" value="Sign Up"/>
+            <input type="submit" value="Sign Up"/>
           </ul>
           </form>
         </div>
-        )
-      }
+      )
+    }
 }
 
 export default Signup;

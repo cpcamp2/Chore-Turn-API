@@ -4,6 +4,7 @@ import { h, Component } from 'preact';
 import { Link } from 'preact-router/match';
 
 class Login extends Component {
+
   handleClick = (e) => {
     e.preventDefault();
     // debugger
@@ -27,6 +28,7 @@ class Login extends Component {
       .then( jsonRes => window.location = "/profile")
       .catch( err => console.log(err))
   }
+
 
   render() {
     return (
