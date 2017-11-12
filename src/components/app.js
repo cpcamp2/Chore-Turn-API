@@ -12,8 +12,9 @@ import Login from '../routes/login';
 import NewUser from '../routes/newuser';
 import AddMember from '../routes/addmember';
 import AddChore from '../routes/addchore';
+import DashboardPage from '../routes/dashboard';
 
-// import Devise from 'devise';
+
 
 export default class App extends Component {
 	/** Gets fired when the route changes.
@@ -37,6 +38,7 @@ export default class App extends Component {
 					<NewUser path="/newuser/" />
 					<AddMember path="/addmember/" />
 					<AddChore path="/addchore/" />
+					<DashboardPage path="/dashboard/" test="test" />
 				</Router>
 			</div>
 		);
