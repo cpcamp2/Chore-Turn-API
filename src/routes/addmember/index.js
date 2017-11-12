@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 // import style from './style';
-import $ from 'jquery';
+// import $ from 'jquery';
 // import Button from 'react-toolbox/button';
 
 export default class AddMember extends Component {

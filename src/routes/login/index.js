@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 // import './App.css';
-import $ from 'jquery';
+// import $ from 'jquery';
 import { Link } from 'preact-router/match';
 
 class Login extends Component {
