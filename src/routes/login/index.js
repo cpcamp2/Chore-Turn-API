@@ -25,7 +25,13 @@ class Login extends Component {
         body: data
       })
       .then( res => res.json())
-      .then( jsonRes => window.location = "/profile")
+      .then( jsonRes => {
+        if (jsonRes.errors) {
+          console.log(jsonRes)
+        } else {
+          window.location = '/'
+        }
+      })
       .catch( err => console.log(err))
   }
 

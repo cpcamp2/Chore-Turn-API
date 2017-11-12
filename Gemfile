@@ -22,6 +22,8 @@ gem 'faker'
 
 gem 'jbuilder', '~> 2.5'
 
+gem 'bcrypt'
+
 group :development, :test do
   gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
