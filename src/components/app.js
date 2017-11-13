@@ -14,6 +14,7 @@ import AddMember from '../routes/addmember';
 import AddChore from '../routes/addchore';
 import DashboardPage from '../routes/dashboard';
 import Household from '../routes/household';
+import AddHousehold from '../routes/household/new';
 import Logout from '../routes/logout';
 
 
@@ -40,6 +41,7 @@ export default class App extends Component {
 					<NewUser path="/newuser/" />
 					<AddMember path="/addmember/" />
 					<AddChore path="/addchore/" />
+					<AddHousehold path="/households/new" />
 					<DashboardPage path="/dashboard/" test="test" />
 					<Household path="/household/" household="DBC House"/>
 				</Router>

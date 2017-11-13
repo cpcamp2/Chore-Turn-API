@@ -12,7 +12,7 @@ export default class DashboardPage extends Component {
     componentDidMount(){
      axios.get('http://localhost:3000/households')
      .then(function(response){
-       debugger
+       // debugger
          this.setState({households: response.data})
       }.bind(this))
        .catch(function(xhr) {
@@ -32,6 +32,10 @@ export default class DashboardPage extends Component {
               <Link href={`/households/${household.id}`}>{household.name}</Link>
             )
           })}
+          <br></br>
+          <br></br>
+          <Link href={'/households/new'}>+Add a new household</Link>
+
         </div>
       )
     }

@@ -10,6 +10,7 @@ class HouseholdsController < ApplicationController
 
   def new
     @household = Household.new
+    render json: @household
   end
 
   def edit

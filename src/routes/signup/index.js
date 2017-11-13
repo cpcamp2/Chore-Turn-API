@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
-// import $ from 'jquery';
-import axios from 'axios';
+
 
 class Signup extends Component {
     handleClick = (e) => {
@@ -25,8 +24,17 @@ class Signup extends Component {
           body: data
         })
         .then( res => res.json())
-        .then( jsonRes => window.location = "/profile")
-        .catch( err => console.log(err))
+        .then( jsonRes => {
+          if(jsonRes.errors){
+
+          } else {
+            // window.location = "/profile"
+            // redirect
+          }
+        })
+        .catch( err => {
+        // show errors
+          console.log(err)})
     }
 
     render() {
