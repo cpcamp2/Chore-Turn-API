@@ -10,9 +10,9 @@ Rails.application.routes.draw do
       end
   end
 
+
   # get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   # get '/login', to: 'sessions#destroy'
-
   post '/users', to: 'users#create'
 end
