@@ -13,6 +13,7 @@ import NewUser from '../routes/newuser';
 import AddMember from '../routes/addmember';
 import AddChore from '../routes/addchore';
 import DashboardPage from '../routes/dashboard';
+import Household from '../routes/household';
 import Logout from '../routes/logout';
 
 
@@ -40,6 +41,7 @@ export default class App extends Component {
 					<AddMember path="/addmember/" />
 					<AddChore path="/addchore/" />
 					<DashboardPage path="/dashboard/" test="test" />
+					<Household path="/household/" household="DBC House"/>
 				</Router>
 			</div>
 		);
