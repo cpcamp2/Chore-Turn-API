@@ -2,27 +2,27 @@ import { h, Component } from 'preact';
 // import style from './style';
 
 export default class AddChore extends Component {
-	handleClick = (e) => {
+	handleSubmit = (e) => {
 		e.preventDefault();
-		var url = 'http://localhost:3000/households/' + {household_id} + '/chores',
+		var url = 'http://localhost:3000/households/' + `household_id` + '/chores',
 			data = JSON.stringify({
 				chore: {
-					user_id: sessionStorage.id,
+					// user_id: sessionStorage.id,
+					household_id: 1, //this.props.match.params.household_id
 					name: this.name.value,
 					duration: this.duration.value,
 					// status: this.status.value,
 					date: this.date.value,
 				}
 			});
-			debugger
 
 		fetch(url,{
 			method: 'POST',
 			headers: {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json',
-			}
-			// body: data
+			},
+			body: data
 		})
 		.then( res => res.json())
 		.then( jsonRes => window.location = "/household")
@@ -40,7 +40,7 @@ export default class AddChore extends Component {
 				<p>In the meantime, try adding a few chores to your household.</p>
 				{/* <input type="submit" value="Add Chores"/> */}
 				<br></br>
-				<form onSubmit={this.handleClick} method="get">
+				<form onSubmit={this.handleSubmit} method="get">
 					<h3>Add Chore</h3>
 				<ul>
 					<li>Chore: <input ref={a => this.name = a} type="text"/></li>

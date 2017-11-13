@@ -19,7 +19,7 @@ class ChoresController < ApplicationController
   def create
     @chore = Chore.new(chore_params)
     if @chore.save
-      redirect_to @chore
+      render json: @chore, :status => 200
     else
       render 'new'
     end
