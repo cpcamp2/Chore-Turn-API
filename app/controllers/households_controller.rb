@@ -19,10 +19,12 @@ class HouseholdsController < ApplicationController
 
   def create
     @household = Household.new(household_params)
+    # binding.pry
     if @household.save
-      redirect_to @household
+      render json: @household, :status => 200
     else
-      render 'new'
+      p 
+      render json: {errors: @household.errors.full_messages}
     end
   end
 

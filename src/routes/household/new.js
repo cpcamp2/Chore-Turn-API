@@ -5,13 +5,12 @@ export default class AddHousehold extends Component {
       e.preventDefault();
       var url = 'http://localhost:3000/households',
           data= JSON.stringify({
-            households: {
+            household: {
               name: this.HouseholdName.value,
               address: this.address.value,
               city: this.city.value,
               state: this.state.value,
-              zip_code: this.zipcode.value,
-
+              zip_code: this.zipcode.value
             }
           });
 
@@ -24,6 +23,7 @@ export default class AddHousehold extends Component {
           body: data
         })
         .then( res => res.json())
+        // .then( jsonRes => {debugger})
         .then( jsonRes => window.location = "/profile")
         .catch( err => console.log(err))
     }
@@ -41,7 +41,7 @@ export default class AddHousehold extends Component {
             <li> Address: <input ref={b => this.address = b} type="text"/> </li> <br/>
             <li> City: <input ref={c => this.city = c} type="text"/> </li> <br/>
             <li> State: <input ref={d => this.state = d} type="text"/> </li> <br/>
-            <li> Zip Code: <input ref={e => this.zipcode = e} type="text"/> </li> <br/>
+            <li> Zip Code: <input ref={e => this.zipcode = e} type="integer"/> </li> <br/>
             <input type="submit" value="Add Household"/>
           </ul>
           </form>

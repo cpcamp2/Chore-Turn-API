@@ -19,7 +19,6 @@ class ChoresController < ApplicationController
   def create
     @chore = Chore.new(chore_params)
     @chore.household_id = params[:household_id]
-    byebug
     if @chore.save
       render json: @chore, :status => 200
     else
