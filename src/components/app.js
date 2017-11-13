@@ -40,8 +40,9 @@ export default class App extends Component {
 					<Signup path="/signup/" />
 					<NewUser path="/newuser/" />
 					<AddMember path="/addmember/" />
-					<AddChore path="/addchore/" />
+					<AddChore path="/addchore/:household_id" />
 					<AddHousehold path="/households/new" />
+
 					<DashboardPage path="/dashboard/" test="test" />
 					<Household path="/household/" household="DBC House"/>
 				</Router>

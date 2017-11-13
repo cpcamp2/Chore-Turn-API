@@ -18,31 +18,31 @@ class ChoresController < ApplicationController
 
   def create
     @chore = Chore.new(chore_params)
+    @chore.household_id = params[:household_id]
+    byebug
     if @chore.save
-      redirect_to @chore
+      render json: @chore, :status => 200
     else
-      render 'new'
+      render json: {errors: @chore.errors.full_messages}
     end
   end
 
   def update
     @chore = Chore.find(params[:id])
     if @chore.update(chore_params)
-      redirect_to @chore
+      render json: @chore, :status => 200
     else
-      render 'edit'
+      render json: {errors: @chore.errors.full_messages}
     end
   end
 
   def destroy
-  @chore = Chore.find(params[:id])
-  @chore.destroy
-
-  redirect_to chores_path
-end
+    @chore = Chore.find(params[:id])
+    @chore.destroy
+  end
 
   private
   def chore_params
-    params.require(:chore).permit(:id, :name, :duration, :status, :date, :household_id)
+    params.require(:chore).permit(:id, :name, :duration, :status, :date)
   end
 end
