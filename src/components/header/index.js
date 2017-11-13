@@ -4,6 +4,20 @@ import style from './style';
 
 export default class Header extends Component {
 	render() {
+		if(sessionStorage.id){
+			return (
+				<header class={style.header}>
+
+					<Link activeClassName={style.active} href="/"><h1>Chore-turn</h1></Link>
+
+					<nav>
+						<Link activeClassName={style.active} href="/">Home</Link>
+						<Link activeClassName={style.active} href="/logout">Logout</Link>
+						<Link activeClassName={style.active} href="/profile">Me!</Link>
+					</nav>
+				</header>
+			)
+		}
 		return (
 			<header class={style.header}>
 

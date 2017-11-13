@@ -29,6 +29,16 @@ class Login extends Component {
         if (jsonRes.errors) {
           console.log(jsonRes)
         } else {
+          sessionStorage.id = jsonRes.id
+          sessionStorage.created_at = jsonRes.created_at
+          sessionStorage.email = jsonRes.email
+          sessionStorage.first_name = jsonRes.first_name
+          sessionStorage.last_name = jsonRes.last_name
+          sessionStorage.password_digest = jsonRes.password_digest
+          sessionStorage.updated_at = jsonRes.updated_at
+          sessionStorage.username = jsonRes.username
+
+
           window.location = '/'
         }
       })
