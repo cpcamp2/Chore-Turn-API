@@ -10,6 +10,7 @@ class Household extends Component {
     return (
       <div>
         <h1>Household: { household }</h1>
+      
         <Tabs className='demo-tabs' indicator-accent={true}>
           <Tabs.Tab href="/household">Details</Tabs.Tab>
           <Tabs.Tab href="/household">Members</Tabs.Tab>

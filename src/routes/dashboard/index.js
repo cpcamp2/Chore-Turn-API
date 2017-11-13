@@ -12,7 +12,7 @@ export default class DashboardPage extends Component {
     componentDidMount(){
      axios.get('http://localhost:3000/households')
      .then(function(response){
-       debugger
+       // debugger
          this.setState({households: response.data})
       }.bind(this))
        .catch(function(xhr) {
@@ -29,9 +29,14 @@ export default class DashboardPage extends Component {
           <h2> Your list of Households </h2>
           {this.state.households.map( (household) => {
             return (
-              <Link href={`/households/${household.id}`}>{household.name}</Link>
+              <Link href={`/households/${household.id}`}>{household.name}<br /></Link>
             )
           })}
+          <br></br>
+          <br></br>
+
+          <Link href={'/households/new'}>+Add a new household</Link>
+
         </div>
       )
     }

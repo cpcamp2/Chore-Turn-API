@@ -11,6 +11,9 @@ export default class Home extends Component {
 				</div>
 			)
 		}
+
+
+
 		return (
 			<div class={style.home}>
 				<h1>Welcome to Chore Turn!</h1>
