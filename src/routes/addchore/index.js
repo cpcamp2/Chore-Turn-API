@@ -4,11 +4,11 @@ import { h, Component } from 'preact';
 export default class AddChore extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
-		var url = 'http://localhost:3000/households/' + `household_id` + '/chores',
+		var url = 'http://localhost:3000/households/' + this.props.household_id + '/chores',
 			data = JSON.stringify({
 				chore: {
 					// user_id: sessionStorage.id,
-					household_id: 1, //this.props.match.params.household_id
+					// household_id: this.props.household_id,
 					name: this.name.value,
 					duration: this.duration.value,
 					// status: this.status.value,
