@@ -13,6 +13,7 @@ import NewUser from '../routes/newuser';
 import AddMember from '../routes/addmember';
 import AddChore from '../routes/addchore';
 import DashboardPage from '../routes/dashboard';
+import Logout from '../routes/logout';
 
 
 export default class App extends Component {
@@ -32,6 +33,7 @@ export default class App extends Component {
 					<Home path="/" />
 					<Profile path="/profile/" user="me" />
 					<Profile path="/profile/:user" />
+					<Logout path="/logout/" />
 					<Login path="/login/" />
 					<Signup path="/signup/" />
 					<NewUser path="/newuser/" />
