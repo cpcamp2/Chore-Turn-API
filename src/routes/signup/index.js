@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 // import $ from 'jquery';
-import axios from 'axios'
+import axios from 'axios';
 
 class Signup extends Component {
     handleClick = (e) => {
