@@ -1,6 +1,7 @@
 class HouseholdsController < ApplicationController
   def index
     @households = Household.all
+    # res = @households.map {|h| {house: h, members: h.users} }
     render json: @households
   end
 
