@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'welcome/index'
+  get '/households', to: "households#index"
   resources :households do
     get '/users/user_id/chores', to: 'households/users/chores#index'
       resources :chores do

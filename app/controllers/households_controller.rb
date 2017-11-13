@@ -1,6 +1,8 @@
 class HouseholdsController < ApplicationController
   def index
     @households = Household.all
+    p "=================================================="
+    render json: @households
   end
 
   def show
