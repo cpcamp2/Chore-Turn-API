@@ -38,7 +38,7 @@ export default class App extends Component {
 					<Signup path="/signup/" />
 					<NewUser path="/newuser/" />
 					<AddMember path="/addmember/" />
-					<AddChore path="/addchore/" />
+					<AddChore path="/addchore" />
 					<DashboardPage path="/dashboard/" test="test" />
 				</Router>
 			</div>
