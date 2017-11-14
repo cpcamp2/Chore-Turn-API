@@ -28,7 +28,7 @@ class Signup extends Component {
           if(jsonRes.errors){
 
           } else {
-            // window.location = "/profile"
+             window.location = "/login"
             // redirect
           }
         })
