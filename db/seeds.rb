@@ -22,8 +22,8 @@ HouseholdUser.create(user_id: 3, household_id: 1)
 HouseholdUser.create(user_id: 4, household_id: 1)
 
 # Creating Chores
-15.times do
-  chore =  Chore.create(name: "Chore", duration: Faker::Number.between(1,30), status: [true, false].sample, date: Faker::Date.between(2.days.ago, Date.today), household_id: 1)
+3.times do
+  chore =  Chore.create(name: ["Dishes", "Trash", "Laundry", "Mopping", "Clean Toilet", "Empty Dish Washer"].sample, duration: Faker::Number.between(1,30), status: [true, false].sample, date: Faker::Date.between(2.days.ago, Date.today), household_id: 1)
 end
 
 # Assigning Chores to a User
